@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/category_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/category_textview"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/central_area"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_textview"
+        android:weightSum="6"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/stock_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/tertiary_text_dark"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/image_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3"
+            />
+
+
+        <TextView
+            android:id="@+id/old_price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/tertiary_text_dark"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/old_price_textview"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/central_area"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        >
+        <ToggleButton
+            android:id="@+id/wishlist_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:textOff="@string/wishlist"
+            android:textOn="@string/wishlist"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/remove_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_margin="5dp"
+            android:text="@string/remove"
+            android:visibility="invisible"/>
+
+        <ToggleButton
+            android:id="@+id/cart_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:textOff="@string/cart"
+            android:textOn="@string/cart"
+            android:visibility="invisible"
+            />
+
+        </LinearLayout>
+
+
+</RelativeLayout>

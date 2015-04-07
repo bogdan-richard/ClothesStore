@@ -1,0 +1,61 @@
+THIS IS THE README FILE OF THE CLOTHES STORE APPLICATION MADE FOR DELOITTE DIGITAL CASE STUDY
+
+BASIC INFORMATION:
+Author: Richárd Bogdán (b.richard.mail@gmail.com)
+Built with Android Studio 1.1.0
+Time taken: ~12 hours
+
+PROJECT STATUS OVERVIEW:
+
+	CONTENTS:
+	- full source code
+	- application test
+	
+	USER STORIES MADE:
+	1. As a Customer I can view the products and their category, price and availability information. 
+	2. As a Customer I can add a product to my shopping cart. 
+	3. As a Customer I can remove a product from my shopping cart. 
+	4. As a Customer I can view the total price for the products in my shopping cart. 
+	5. As a Customer I am unable to add Out of Stock products to the shopping cart. 
+
+	Can easily checked via running the test. Out of Stock products cannot be addod to cart, button is disabled. (dd.casestudy.clothesstore.main.Listadapter:97)
+
+	API PACKAGE INFORMATION:
+	- API is described in dd.casestudy.clothesstore.api.ClothesStoreApi
+	- dd.casestudy.clothesstore.api.HttpCommands contains sample commands
+	- CartItem, ProductId, StoreItem classes are made, for dealing those data in one unit
+
+	MAIN PACKAGE INFORMATION:
+	- StoreListActivity is the class for the activity for the store
+	- ListAdapter is it's custom listadapter
+	- CartListActivity is the class for the activity for the cart
+	- CartListAdapter is it's custom listadapter
+
+	SUPPORT PACKAGE INFORMATION:
+	- CallableTask is simple interface for AsyncTask and allow exceptions to be reported back in the UI thread
+	- Constants is a class to store constants, there is only one, but it's fo the future
+	- RestClient is a basic REST client for the HTTP communication
+	- TaskCallback is theinterface element for CallableTask
+
+	TEST CLASS:
+	- StoreListActivityTest is the class for testing the app. It contains a Robotium test and a small test for checking some basic functions
+
+MORE INFORMATION:
+- used asynchrounus calls, to avoid blocking the UI, for example for HTTP communication
+- tried to keep it simple, and at the time small enough to avoid redunancy
+- product can be showed to clients at a review meeting
+- to open the Cart Activity you must press the CART icon in the action bar
+
+ABOUT TIME VS. QUALITY
+I didn't know the exact amount of time, to spend on the project, so I will highlight out some possible improvements, if more time is avaible:
+- plain custom UI, tested on Nexus 5 device, screen size independent UI needs further improvement
+- improved UI
+- no Android lifecycle events handled
+- wishlist is not functioning
+- more test elements, specially on network connection errors and etc...
+- improved menu
+- improved navigation
+- more opportunity to do actions (remove from cart at CartActivity, etc...)
+- etc...
+
+THIS IS THE README FILE OF THE CLOTHES STORE APPLICATION MADE FOR DELOITTE DIGITAL CASE STUDY
